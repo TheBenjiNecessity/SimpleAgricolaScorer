@@ -9,7 +9,7 @@
 import UIKit
 
 class ASFinalScoreRow: ASRow {
-    init() {
+    override init() {
         super.init(title: "Final Score:")
     }
 }

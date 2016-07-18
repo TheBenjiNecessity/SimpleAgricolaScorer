@@ -30,13 +30,12 @@ class NumberInputTableViewCell: UITableViewCell, UITextFieldDelegate {
     }
     
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
-        let newLength: Int = count(textField.text) + count(string) - range.length;
+        let newLength: Int = textField.text!.characters.count + string.characters.count - range.length;
         return (newLength > 2) ? false : true;
     }
     
-    
     @IBAction func editingDidChange(sender: AnyObject) {
-        delegate?.numberPickerView(numberField, numberWasTyped: numberField.text.toInt()!)
+        delegate?.numberPickerView(numberField, numberWasTyped: Int(numberField.text!)!)
         NSNotificationCenter.defaultCenter().postNotificationName("numberPickerDidChange", object: nil)
     }
 

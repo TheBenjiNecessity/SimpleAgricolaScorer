@@ -21,7 +21,7 @@ class ScorerViewController: UIViewController {
 
     var player: NSString
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         self.player = "None"
         
         super.init(coder: aDecoder)

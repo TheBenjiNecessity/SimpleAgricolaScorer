@@ -8,12 +8,12 @@
 
 import UIKit
 
-class ASLimitRow: ASRow {
-    //var isShowingPicker: Bool = false
+class ASLimitRow: ASResultRowExtender {
     var upperLimit: Int = -1
     
     init(limit: Int) {
         super.init(title: "")
         upperLimit = limit
+        height = 162.0;
     }
 }

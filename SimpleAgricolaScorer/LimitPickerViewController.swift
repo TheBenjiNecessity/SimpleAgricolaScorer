@@ -11,8 +11,8 @@ import UIKit
 class LimitPickerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
    @IBOutlet var limitPicker: UIPickerView!
-   var upperLimit: Int;
-   var chosenValue: Int?;
+   var upperLimit: Int
+   var chosenValue: Int?
    
    /* ================================== init methods ================================== */
    convenience init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?, upperLimit upperLimitValue: Int) {
@@ -25,18 +25,13 @@ class LimitPickerViewController: UIViewController, UIPickerViewDelegate, UIPicke
       super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil);
    }
 
-   required init(coder aDecoder: NSCoder) {
+   required init?(coder aDecoder: NSCoder) {
       upperLimit = 1;
       super.init(coder: aDecoder);
    }
    
-//   convenience override init() {
-//    
-//      self.init(nibName: nil, bundle: nil);
-//   }
-   
    /* ================================== delegate methods ================================== */
-   func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+   func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
       return String(row);
    }
    
@@ -65,16 +60,4 @@ class LimitPickerViewController: UIViewController, UIPickerViewDelegate, UIPicke
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

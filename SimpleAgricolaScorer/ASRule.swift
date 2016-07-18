@@ -9,20 +9,25 @@
 import UIKit
 
 class ASRule: NSObject {
-    static var mainPoints: Int = 0;
-    private var p: Int = 0
-    
-    var points: Int {
+    private var _amount = 0
+    var points: Int = -1
+    var amount: Int {
+        get { return _amount }
         set {
-            ASRule.mainPoints -= p
-            p = newValue
-            ASRule.mainPoints += p
-            NSNotificationCenter.defaultCenter().postNotificationName("finalScoreNotification", object: nil)
-        }
-        get {
-            return p
+            _amount = newValue
+            setPoints()
         }
     }
     
-    func setPointsByIndex(index: Int) {}
+    /**
+        A function that computes the number of points from an amount of something. 
+        For example, if a player inputs 5 grain then they will receive 2 points.
+        - parameter amount: the amount given
+        - returns: the number of points based on amount
+    */
+    func pointsByAmount(amount: Int) -> Int {abort()}
+    
+    func setPoints() {
+        points = pointsByAmount(_amount)
+    }
 }

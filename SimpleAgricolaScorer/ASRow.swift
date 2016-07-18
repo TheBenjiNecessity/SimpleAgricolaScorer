@@ -12,6 +12,12 @@ class ASRow: NSObject {
     var displayTitle: String
     var value: Int = 0
     var rule: ASRule? = nil
+    var shouldSelect = false;
+    var height: CGFloat = 44.0;
+    
+    override init() {
+        displayTitle = ""
+    }
     
     init(title: String) {
         displayTitle = title

@@ -8,9 +8,9 @@
 
 import UIKit
 
-class ASInputResultRow: ASRow, NumberPickerDelegate {
-    init(displayTitle: String) {
-        super.init(title: displayTitle)
+class ASInputResultRow: ASResultRow, NumberPickerDelegate {
+    init(displayTitle: String, row: ASResultRowExtender) {
+        super.init(title: displayTitle, row: row)
     }
     
     func numberPickerView(numberPicker: UITextField, numberWasTyped number: Int) {

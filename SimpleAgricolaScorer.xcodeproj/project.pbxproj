@@ -19,8 +19,11 @@
 		792FA5011A8D3CA100314D9B /* MainData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792FA5001A8D3CA100314D9B /* MainData.swift */; };
 		792FA5031A8D71F800314D9B /* ScorerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792FA5021A8D71F800314D9B /* ScorerViewController.swift */; };
 		792FA5051A8EEDE700314D9B /* ScorerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792FA5041A8EEDE700314D9B /* ScorerTableViewController.swift */; };
+		794027ED1BF16FFA00620EBB /* ASResultRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794027EC1BF16FFA00620EBB /* ASResultRow.swift */; };
+		794593751C710E6D00E44031 /* ASDividerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794593741C710E6D00E44031 /* ASDividerRow.swift */; };
 		795044DE1AC249C1003614BA /* LimitPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795044DC1AC249C1003614BA /* LimitPickerViewController.swift */; };
 		795044DF1AC249C1003614BA /* LimitPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 795044DD1AC249C1003614BA /* LimitPickerViewController.xib */; };
+		79504FEE1BFAB27D0079ABC1 /* ASResultRowExtender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79504FED1BFAB27D0079ABC1 /* ASResultRowExtender.swift */; };
 		79AFC0441AF1A52500AD2399 /* MultiChoiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AFC0421AF1A52500AD2399 /* MultiChoiceTableViewCell.swift */; };
 		79AFC0451AF1A52500AD2399 /* MultiChoiceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79AFC0431AF1A52500AD2399 /* MultiChoiceTableViewCell.xib */; };
 		79B6CF3D1B6F9DB8008C5642 /* ASInputRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B6CF3C1B6F9DB8008C5642 /* ASInputRule.swift */; };
@@ -31,10 +34,13 @@
 		79C754ED1B6C51A800793BEF /* ASTranslateRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C754EC1B6C51A800793BEF /* ASTranslateRule.swift */; };
 		79CCA18B1B140901009A6271 /* ASInputResultRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CCA18A1B140901009A6271 /* ASInputResultRow.swift */; };
 		79CCA18D1B154C47009A6271 /* NumberInputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CCA18C1B154C47009A6271 /* NumberInputTableViewCell.swift */; };
+		79CCEBB61D3BFE6400BC2827 /* ASPlayerSelectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CCEBB51D3BFE6400BC2827 /* ASPlayerSelectButton.swift */; };
+		79CCEBB81D3C22B000BC2827 /* ASPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CCEBB71D3C22B000BC2827 /* ASPlayer.swift */; };
 		79CE446C1AEF138200B11A69 /* ASRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CE446B1AEF138200B11A69 /* ASRow.swift */; };
 		79CE446E1AEF13F200B11A69 /* ASLimitRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CE446D1AEF13F200B11A69 /* ASLimitRow.swift */; };
 		79CE44701AEF144400B11A69 /* ASChoicesRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CE446F1AEF144400B11A69 /* ASChoicesRow.swift */; };
 		79CE44721AEF189900B11A69 /* ASInputRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CE44711AEF189900B11A69 /* ASInputRow.swift */; };
+		79D6763B1B79947E00EDC6DC /* ASModifierRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D6763A1B79947E00EDC6DC /* ASModifierRow.swift */; };
 		79DCA68F1AE8893600E57E4F /* LimitPickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DCA68D1AE8893600E57E4F /* LimitPickerTableViewCell.swift */; };
 		79DCA6901AE8893600E57E4F /* LimitPickerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79DCA68E1AE8893600E57E4F /* LimitPickerTableViewCell.xib */; };
 		79DDFCEB1B4F5F9F00F4DA6E /* ASScorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DDFCEA1B4F5F9F00F4DA6E /* ASScorer.swift */; };
@@ -68,8 +74,11 @@
 		792FA5001A8D3CA100314D9B /* MainData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainData.swift; sourceTree = "<group>"; };
 		792FA5021A8D71F800314D9B /* ScorerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScorerViewController.swift; sourceTree = "<group>"; };
 		792FA5041A8EEDE700314D9B /* ScorerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScorerTableViewController.swift; sourceTree = "<group>"; };
+		794027EC1BF16FFA00620EBB /* ASResultRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASResultRow.swift; sourceTree = "<group>"; };
+		794593741C710E6D00E44031 /* ASDividerRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASDividerRow.swift; sourceTree = "<group>"; };
 		795044DC1AC249C1003614BA /* LimitPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LimitPickerViewController.swift; sourceTree = "<group>"; };
 		795044DD1AC249C1003614BA /* LimitPickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LimitPickerViewController.xib; sourceTree = "<group>"; };
+		79504FED1BFAB27D0079ABC1 /* ASResultRowExtender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASResultRowExtender.swift; sourceTree = "<group>"; };
 		79AFC0421AF1A52500AD2399 /* MultiChoiceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiChoiceTableViewCell.swift; sourceTree = "<group>"; };
 		79AFC0431AF1A52500AD2399 /* MultiChoiceTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultiChoiceTableViewCell.xib; sourceTree = "<group>"; };
 		79B6CF3C1B6F9DB8008C5642 /* ASInputRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASInputRule.swift; sourceTree = "<group>"; };
@@ -80,10 +89,13 @@
 		79C754EC1B6C51A800793BEF /* ASTranslateRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASTranslateRule.swift; sourceTree = "<group>"; };
 		79CCA18A1B140901009A6271 /* ASInputResultRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASInputResultRow.swift; sourceTree = "<group>"; };
 		79CCA18C1B154C47009A6271 /* NumberInputTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberInputTableViewCell.swift; sourceTree = "<group>"; };
+		79CCEBB51D3BFE6400BC2827 /* ASPlayerSelectButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASPlayerSelectButton.swift; sourceTree = "<group>"; };
+		79CCEBB71D3C22B000BC2827 /* ASPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASPlayer.swift; sourceTree = "<group>"; };
 		79CE446B1AEF138200B11A69 /* ASRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASRow.swift; sourceTree = "<group>"; };
 		79CE446D1AEF13F200B11A69 /* ASLimitRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASLimitRow.swift; sourceTree = "<group>"; };
 		79CE446F1AEF144400B11A69 /* ASChoicesRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASChoicesRow.swift; sourceTree = "<group>"; };
 		79CE44711AEF189900B11A69 /* ASInputRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASInputRow.swift; sourceTree = "<group>"; };
+		79D6763A1B79947E00EDC6DC /* ASModifierRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASModifierRow.swift; sourceTree = "<group>"; };
 		79DCA68D1AE8893600E57E4F /* LimitPickerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LimitPickerTableViewCell.swift; sourceTree = "<group>"; };
 		79DCA68E1AE8893600E57E4F /* LimitPickerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LimitPickerTableViewCell.xib; sourceTree = "<group>"; };
 		79DDFCEA1B4F5F9F00F4DA6E /* ASScorer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASScorer.swift; sourceTree = "<group>"; };
@@ -129,20 +141,21 @@
 		792FA4D81A8C3A1500314D9B /* SimpleAgricolaScorer */ = {
 			isa = PBXGroup;
 			children = (
-				792FA4DB1A8C3A1500314D9B /* AppDelegate.swift */,
-				792FA4E21A8C3A1500314D9B /* Main.storyboard */,
 				792FA5001A8D3CA100314D9B /* MainData.swift */,
+				792FA4DB1A8C3A1500314D9B /* AppDelegate.swift */,
 				792FA4FE1A8C41BF00314D9B /* StartViewController.swift */,
 				792FA5021A8D71F800314D9B /* ScorerViewController.swift */,
 				795044DC1AC249C1003614BA /* LimitPickerViewController.swift */,
+				792FA5041A8EEDE700314D9B /* ScorerTableViewController.swift */,
 				79DDFCEA1B4F5F9F00F4DA6E /* ASScorer.swift */,
+				79CCEBB51D3BFE6400BC2827 /* ASPlayerSelectButton.swift */,
 				79DB050B1B478DA800F4D265 /* Interface */,
 				79DB050A1B478D7F00F4D265 /* TableViewCells */,
-				792FA5041A8EEDE700314D9B /* ScorerTableViewController.swift */,
 				79DDFCE91B4F5F4000F4DA6E /* ASRule */,
 				798C9D2C1B47426C003657A7 /* ASRow */,
 				792FA4E51A8C3A1500314D9B /* Images.xcassets */,
 				792FA4E71A8C3A1500314D9B /* LaunchScreen.xib */,
+				792FA4E21A8C3A1500314D9B /* Main.storyboard */,
 				792FA4DD1A8C3A1500314D9B /* SimpleAgricolaScorer.xcdatamodeld */,
 				792FA4D91A8C3A1500314D9B /* Supporting Files */,
 			);
@@ -177,13 +190,18 @@
 		798C9D2C1B47426C003657A7 /* ASRow */ = {
 			isa = PBXGroup;
 			children = (
+				794593741C710E6D00E44031 /* ASDividerRow.swift */,
 				79CE446B1AEF138200B11A69 /* ASRow.swift */,
+				794027EC1BF16FFA00620EBB /* ASResultRow.swift */,
+				79D6763A1B79947E00EDC6DC /* ASModifierRow.swift */,
+				79504FED1BFAB27D0079ABC1 /* ASResultRowExtender.swift */,
 				79CE44711AEF189900B11A69 /* ASInputRow.swift */,
 				79CE446F1AEF144400B11A69 /* ASChoicesRow.swift */,
 				79CE446D1AEF13F200B11A69 /* ASLimitRow.swift */,
 				791B564D1B17EA6D00126C10 /* ASFinalScoreRow.swift */,
 				79CCA18A1B140901009A6271 /* ASInputResultRow.swift */,
 				792F15E81AFC59B10047B66F /* ASLimitResultRow.swift */,
+				79CCEBB71D3C22B000BC2827 /* ASPlayer.swift */,
 			);
 			name = ASRow;
 			sourceTree = "<group>";
@@ -266,6 +284,8 @@
 		792FA4CE1A8C3A1500314D9B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0710;
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Benjamin Wishart";
 				TargetAttributes = {
@@ -327,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				792FA5011A8D3CA100314D9B /* MainData.swift in Sources */,
+				79D6763B1B79947E00EDC6DC /* ASModifierRow.swift in Sources */,
 				79C4EABB1B1B4A64008579B8 /* ASRangesRule.swift in Sources */,
 				79DCA68F1AE8893600E57E4F /* LimitPickerTableViewCell.swift in Sources */,
 				79CCA18D1B154C47009A6271 /* NumberInputTableViewCell.swift in Sources */,
@@ -345,10 +366,15 @@
 				792FA4DC1A8C3A1500314D9B /* AppDelegate.swift in Sources */,
 				79CCA18B1B140901009A6271 /* ASInputResultRow.swift in Sources */,
 				791B564E1B17EA6D00126C10 /* ASFinalScoreRow.swift in Sources */,
+				79CCEBB61D3BFE6400BC2827 /* ASPlayerSelectButton.swift in Sources */,
+				79CCEBB81D3C22B000BC2827 /* ASPlayer.swift in Sources */,
 				79B6CF3D1B6F9DB8008C5642 /* ASInputRule.swift in Sources */,
 				79C754ED1B6C51A800793BEF /* ASTranslateRule.swift in Sources */,
+				79504FEE1BFAB27D0079ABC1 /* ASResultRowExtender.swift in Sources */,
+				794593751C710E6D00E44031 /* ASDividerRow.swift in Sources */,
 				79B6CF3F1B6FBF9A008C5642 /* ASChoiceRule.swift in Sources */,
 				792FA4DF1A8C3A1500314D9B /* SimpleAgricolaScorer.xcdatamodeld in Sources */,
+				794027ED1BF16FFA00620EBB /* ASResultRow.swift in Sources */,
 				79EA80B21B0A6A56000FDA42 /* ResultTableViewCell.swift in Sources */,
 				79CE44721AEF189900B11A69 /* ASInputRow.swift in Sources */,
 			);

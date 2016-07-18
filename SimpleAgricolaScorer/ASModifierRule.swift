@@ -8,6 +8,12 @@
 
 import UIKit
 
-class ASModifierRule: ASTranslateRule {
-   
+class ASModifierRule: ASRule {
+    var modifyingRule: ASRule
+    
+    init(rule: ASRule) {
+        modifyingRule = rule
+        super.init()
+    }
+
 }

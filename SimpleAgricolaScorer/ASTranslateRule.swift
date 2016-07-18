@@ -9,14 +9,22 @@
 import UIKit
 
 class ASTranslateRule: ASRule {
-   var pointTranslate: [Int] = []
+   var pointTranslate: [Int]? = nil
     
-    init(translate: [Int]) {
-        self.pointTranslate = translate
+    init(translate: [Int]?) {
+        if translate == nil {
+            pointTranslate = [-1, 1, 2, 3, 4]
+        } else {
+            pointTranslate = translate
+        }
+        
         super.init()
     }
     
-    override func setPointsByIndex(index: Int) {
-        points = pointTranslate[index]
+    override func pointsByAmount(amount: Int) -> Int {
+        if let translate = pointTranslate {
+            return translate[amount]
+        }
+        return -1
     }
 }

@@ -10,5 +10,6 @@ import UIKit
 
 class MainData: NSObject {
     
-    var playerScoresArray = [Int]()
+    static let sharedInstance = MainData()
+    
 }

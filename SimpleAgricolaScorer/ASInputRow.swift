@@ -8,9 +8,9 @@
 
 import UIKit
 
-class ASInputRow: ASRow {
+class ASInputRow: ASResultRowExtender {
     
-    init() {
+    override init() {
         super.init(title: "")
     }
 }

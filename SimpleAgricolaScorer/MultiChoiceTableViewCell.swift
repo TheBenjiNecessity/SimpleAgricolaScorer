@@ -8,10 +8,15 @@
 
 import UIKit
 
+protocol ChoicesDelegate {
+    func choicesView(changedChoiceToIndex choiceIndex: Int)
+}
+
 class MultiChoiceTableViewCell: UITableViewCell {
-    var row: ASChoicesRow? = nil
+    var delegate: ChoicesDelegate?
     
     @IBOutlet var multiSelect: UISegmentedControl!
+    @IBOutlet var displayTitleLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,8 +30,7 @@ class MultiChoiceTableViewCell: UITableViewCell {
     }
     
     @IBAction func choiceChanged(sender: AnyObject) {
-        var segmentedControl: UISegmentedControl = (sender as! UISegmentedControl)
-        
-        row?.choice = segmentedControl.titleForSegmentAtIndex(segmentedControl.selectedSegmentIndex)!
+        let segmentedControl: UISegmentedControl = (sender as! UISegmentedControl)
+        delegate?.choicesView(changedChoiceToIndex: segmentedControl.selectedSegmentIndex)
     }
 }

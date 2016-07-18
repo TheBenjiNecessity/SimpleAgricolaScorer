@@ -16,7 +16,7 @@ class ASInputRule : ASRule {
         super.init()
     }
     
-    override func setPointsByIndex(index: Int) {
-        points = pointsPer * index
+    override func pointsByAmount(amount: Int) -> Int {
+        return pointsPer * amount
     }
 }

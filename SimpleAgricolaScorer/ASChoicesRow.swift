@@ -8,22 +8,22 @@
 
 import UIKit
 
-protocol ChoicesDelegate {
-    func choicesView(changedChoiceToIndex choiceIndex: Int)
-}
-
-class ASChoicesRow: ASRow {
-    var choice: String = ""
+class ASChoicesRow: ASRow, ChoicesDelegate {
     var multiChoices: [String] = []
-    var delegate: ChoicesDelegate?
+    var multiplierChoices: [Int] = []
+    var modifyingRule: ASRule
     
-    init(title: String, withChoices choices: [String], modifierRule: ASModifierRule) {
+    init(title: String, withChoices choices: [String], multiplierChoices: [Int], modifyingRule: ASRule) {
+        self.modifyingRule = modifyingRule
         super.init(title: title)
         multiChoices = choices
-        rule = modifierRule
+        self.multiplierChoices = multiplierChoices
     }
 
-    func choiceChanged(index: Int) {
-        delegate?.choicesView(changedChoiceToIndex: index)
+    func choicesView(changedChoiceToIndex choiceIndex: Int) {
+        if let rule = modifyingRule as? ASInputRule {
+            rule.pointsPer = multiplierChoices[choiceIndex]
+            rule.setPoints()
+        }
     }
 }

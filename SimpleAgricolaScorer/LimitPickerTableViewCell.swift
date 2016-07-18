@@ -23,10 +23,6 @@ class LimitPickerTableViewCell: UITableViewCell, UIPickerViewDelegate, UIPickerV
         super.awakeFromNib()
         LimitPicker.delegate = self;
         LimitPicker.dataSource = self;
-        
-        
-        
-        // Initialization code
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
@@ -35,13 +31,17 @@ class LimitPickerTableViewCell: UITableViewCell, UIPickerViewDelegate, UIPickerV
         // Configure the view for the selected state
     }
     
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
-        return String(row);
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if (row == upperLimit) {
+            return String(row) + "+";
+        } else {
+            return String(row);
+        }
     }
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         chosenValue = row;
-        delegate?.limitPickerView(LimitPicker, didSelectRow: row)
+        delegate?.limitPickerView(LimitPicker, didSelectRow: row)//Does this row equate to what the user sees?
         NSNotificationCenter.defaultCenter().postNotificationName("limitPickerDidChange", object: nil)
     }
     

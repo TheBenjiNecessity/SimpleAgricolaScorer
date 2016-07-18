@@ -8,16 +8,18 @@
 
 import UIKit
 
-class ASLimitResultRow: ASRow, LimitPickerDelegate {
-    var upperLimit: Int = -1
+class ASLimitResultRow: ASResultRow, LimitPickerDelegate {
+    var upperLimit = -1
+    var multiplier = 1
     
-    init(title: String, withLimit limit: Int, pointsRule: ASRule) {
-        upperLimit = limit
-        super.init(title: title, pointsRule: pointsRule)
+    init(title: String, withUpperLimit upperLimit: Int, pointsRule: ASRule, row: ASResultRowExtender) {
+        self.upperLimit = upperLimit
+        super.init(title: title, pointsRule: pointsRule, row: row)
     }
     
     func limitPickerView(limitPicker: UIPickerView, didSelectRow row: Int) {
-        value = limitPicker.selectedRowInComponent(0)
-        rule!.setPointsByIndex(row)
+        let amount = limitPicker.selectedRowInComponent(0)
+        rule?.amount = amount
+        value = amount
     }
 }

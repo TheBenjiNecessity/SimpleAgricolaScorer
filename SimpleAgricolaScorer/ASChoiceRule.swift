@@ -14,10 +14,10 @@ class ASChoiceRule: ASTranslateRule, ChoicesDelegate {
     init(choicesRow: ASChoicesRow, translate: [Int]) {
         self.row = choicesRow
         super.init(translate: translate);
-        self.row.delegate = self
+        //self.row.delegate = self
     }
     
     func choicesView(changedChoiceToIndex choiceIndex: Int) {
-        setPointsByIndex(choiceIndex);
+       // setPointsByIndex(choiceIndex);
     }
 }
