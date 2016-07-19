@@ -31,6 +31,7 @@ class ScorerTableViewController: UITableViewController{
     var newRow: Int
     var rows: [ASRow] = [ASRow]()
     var toggle: Bool
+    let finalScoreRow = ASFinalScoreRow()
     
     required init(coder aDecoder: NSCoder) {
         oldRow = -1
@@ -114,10 +115,6 @@ class ScorerTableViewController: UITableViewController{
         
         // MARK: Setup row views
         rows = Array<ASRow>()
-        
-        rows.append(ASFinalScoreRow())
-        
-        rows.append(ASDividerRow())
         
         rows.append(vegetableRow)
         rows.append(grainRow)
@@ -316,15 +313,6 @@ class ScorerTableViewController: UITableViewController{
             cell.selectionStyle = UITableViewCellSelectionStyle.None
 
             return cell
-        } else if row is ASFinalScoreRow {
-            let cell = tableView.dequeueReusableCellWithIdentifier("ResultTableViewCellIdentifier", forIndexPath: indexPath) as! ResultTableViewCell
-            
-            cell.displayTitleLabel.text = title
-            cell.resultValue.text = String(player!.calculateScore())
-            
-            cell.selectionStyle = UITableViewCellSelectionStyle.None
-
-            return cell
         } else {
             assert(row is ASDividerRow);
             let cell = tableView.dequeueReusableCellWithIdentifier("dividerCellIdentifier", forIndexPath: indexPath)
@@ -339,6 +327,23 @@ class ScorerTableViewController: UITableViewController{
         return rows[indexPath.row].height
     }
     
+    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let cell = tableView.dequeueReusableCellWithIdentifier("ResultTableViewCellIdentifier") as! ResultTableViewCell
+        
+        cell.displayTitleLabel.text = finalScoreRow.displayTitle
+        cell.resultValue.text = String(player!.calculateScore())
+        
+        cell.layer.shadowColor = UIColor.darkGrayColor().CGColor
+        cell.layer.shadowOffset = CGSizeMake(0.0, 1.0)
+        cell.layer.shadowOpacity = 0.5
+        
+        return cell
+    }
+    
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return rows[0].height
+    }
+
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
