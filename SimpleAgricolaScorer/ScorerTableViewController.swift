@@ -322,12 +322,7 @@ class ScorerTableViewController: UITableViewController{
             cell.displayTitleLabel.text = title
             cell.resultValue.text = String(player!.calculateScore())
             
-//            NSNotificationCenter.defaultCenter().addObserverForName("finalScoreNotification", object: nil, queue: nil) {(notification: NSNotification) -> Void in
-//                //set final score here
-//                
-//                cell.resultValue.text = String(player?.calculateScore())
-//                return
-//            }
+            cell.selectionStyle = UITableViewCellSelectionStyle.None
 
             return cell
         } else {
