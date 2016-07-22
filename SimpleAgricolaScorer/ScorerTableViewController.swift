@@ -201,6 +201,9 @@ class ScorerTableViewController: UITableViewController{
             oldRow = newRow
         }
         tableView.endUpdates()
+        
+        let newIndexPath = NSIndexPath(forRow: indexPath.row + 1, inSection: indexPath.section)
+        tableView.scrollToRowAtIndexPath(newIndexPath, atScrollPosition: UITableViewScrollPosition.Middle, animated: true)
     }
     
     func oldRowEqualsNewRow() -> Bool {
