@@ -24,6 +24,8 @@
 		795044DE1AC249C1003614BA /* LimitPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795044DC1AC249C1003614BA /* LimitPickerViewController.swift */; };
 		795044DF1AC249C1003614BA /* LimitPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 795044DD1AC249C1003614BA /* LimitPickerViewController.xib */; };
 		79504FEE1BFAB27D0079ABC1 /* ASResultRowExtender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79504FED1BFAB27D0079ABC1 /* ASResultRowExtender.swift */; };
+		796D10461D41B22D008B62EF /* ASFinalTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796D10451D41B22D008B62EF /* ASFinalTableHeaderView.swift */; };
+		796D10471D41B5CB008B62EF /* ASFinalScoreHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 796D10431D41AE90008B62EF /* ASFinalScoreHeaderView.xib */; };
 		79AFC0441AF1A52500AD2399 /* MultiChoiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AFC0421AF1A52500AD2399 /* MultiChoiceTableViewCell.swift */; };
 		79AFC0451AF1A52500AD2399 /* MultiChoiceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79AFC0431AF1A52500AD2399 /* MultiChoiceTableViewCell.xib */; };
 		79B6CF3D1B6F9DB8008C5642 /* ASInputRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B6CF3C1B6F9DB8008C5642 /* ASInputRule.swift */; };
@@ -79,6 +81,8 @@
 		795044DC1AC249C1003614BA /* LimitPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LimitPickerViewController.swift; sourceTree = "<group>"; };
 		795044DD1AC249C1003614BA /* LimitPickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LimitPickerViewController.xib; sourceTree = "<group>"; };
 		79504FED1BFAB27D0079ABC1 /* ASResultRowExtender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASResultRowExtender.swift; sourceTree = "<group>"; };
+		796D10431D41AE90008B62EF /* ASFinalScoreHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ASFinalScoreHeaderView.xib; sourceTree = "<group>"; };
+		796D10451D41B22D008B62EF /* ASFinalTableHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASFinalTableHeaderView.swift; sourceTree = "<group>"; };
 		79AFC0421AF1A52500AD2399 /* MultiChoiceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiChoiceTableViewCell.swift; sourceTree = "<group>"; };
 		79AFC0431AF1A52500AD2399 /* MultiChoiceTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultiChoiceTableViewCell.xib; sourceTree = "<group>"; };
 		79B6CF3C1B6F9DB8008C5642 /* ASInputRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASInputRule.swift; sourceTree = "<group>"; };
@@ -149,11 +153,13 @@
 				792FA5041A8EEDE700314D9B /* ScorerTableViewController.swift */,
 				79DDFCEA1B4F5F9F00F4DA6E /* ASScorer.swift */,
 				79CCEBB51D3BFE6400BC2827 /* ASPlayerSelectButton.swift */,
+				796D10451D41B22D008B62EF /* ASFinalTableHeaderView.swift */,
 				79DB050B1B478DA800F4D265 /* Interface */,
 				79DB050A1B478D7F00F4D265 /* TableViewCells */,
 				79DDFCE91B4F5F4000F4DA6E /* ASRule */,
 				798C9D2C1B47426C003657A7 /* ASRow */,
 				792FA4E51A8C3A1500314D9B /* Images.xcassets */,
+				796D10431D41AE90008B62EF /* ASFinalScoreHeaderView.xib */,
 				792FA4E71A8C3A1500314D9B /* LaunchScreen.xib */,
 				792FA4E21A8C3A1500314D9B /* Main.storyboard */,
 				792FA4DD1A8C3A1500314D9B /* SimpleAgricolaScorer.xcdatamodeld */,
@@ -323,6 +329,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				796D10471D41B5CB008B62EF /* ASFinalScoreHeaderView.xib in Resources */,
 				79AFC0451AF1A52500AD2399 /* MultiChoiceTableViewCell.xib in Resources */,
 				792FA4E41A8C3A1500314D9B /* Main.storyboard in Resources */,
 				792FA4E91A8C3A1500314D9B /* LaunchScreen.xib in Resources */,
@@ -347,6 +354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				792FA5011A8D3CA100314D9B /* MainData.swift in Sources */,
+				796D10461D41B22D008B62EF /* ASFinalTableHeaderView.swift in Sources */,
 				79D6763B1B79947E00EDC6DC /* ASModifierRow.swift in Sources */,
 				79C4EABB1B1B4A64008579B8 /* ASRangesRule.swift in Sources */,
 				79DCA68F1AE8893600E57E4F /* LimitPickerTableViewCell.swift in Sources */,

@@ -47,6 +47,9 @@ class ScorerTableViewController: UITableViewController{
         title = player?.displayTitle()
         toggle = false
         
+        let nib = UINib(nibName: "ASFinalScoreHeaderView", bundle: nil)
+        tableView.registerNib(nib, forHeaderFooterViewReuseIdentifier: "ASFinalTableHeaderViewIdentifier")
+        
         // MARK: Setup row models
         let vegetableRow = ASLimitResultRow(title: "Vegetables",
                                             withUpperLimit: 4,
@@ -330,21 +333,22 @@ class ScorerTableViewController: UITableViewController{
         return rows[indexPath.row].height
     }
     
-    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ResultTableViewCellIdentifier") as! ResultTableViewCell
+    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {        
+        let cell = self.tableView.dequeueReusableHeaderFooterViewWithIdentifier("ASFinalTableHeaderViewIdentifier")
+        let header = cell as! ASFinalTableHeaderView
         
-        cell.displayTitleLabel.text = finalScoreRow.displayTitle
-        cell.resultValue.text = String(player!.calculateScore())
+        header.displayTitleLabel.text = "Final Score:"
+        header.resultValue.text = String(player!.calculateScore())
         
-        cell.layer.shadowColor = UIColor.darkGrayColor().CGColor
-        cell.layer.shadowOffset = CGSizeMake(0.0, 1.0)
-        cell.layer.shadowOpacity = 0.5
+        header.layer.shadowColor = UIColor.darkGrayColor().CGColor
+        header.layer.shadowOffset = CGSizeMake(0.0, 1.0)
+        header.layer.shadowOpacity = 0.5
         
         return cell
     }
     
     override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return rows[0].height
+        return 44
     }
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
