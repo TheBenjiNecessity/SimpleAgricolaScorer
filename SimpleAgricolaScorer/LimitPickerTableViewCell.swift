@@ -16,6 +16,8 @@ class LimitPickerTableViewCell: UITableViewCell, UIPickerViewDelegate, UIPickerV
     
     @IBOutlet var LimitPicker: UIPickerView!
     var upperLimit: Int = 1;
+    var lowerLimit: Int = 0;
+    var shouldShowPlus = true;
     var chosenValue: Int?;
     var delegate: LimitPickerDelegate?
     
@@ -32,21 +34,23 @@ class LimitPickerTableViewCell: UITableViewCell, UIPickerViewDelegate, UIPickerV
     }
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if (row == upperLimit) {
-            return String(row) + "+";
+        let value = row + lowerLimit
+        
+        if (value == upperLimit && shouldShowPlus) {
+            return String(value) + "+";
         } else {
-            return String(row);
+            return String(value);
         }
     }
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        chosenValue = row;
+        chosenValue = row + lowerLimit;
         delegate?.limitPickerView(LimitPicker, didSelectRow: row)//Does this row equate to what the user sees?
         NSNotificationCenter.defaultCenter().postNotificationName("limitPickerDidChange", object: nil)
     }
     
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return upperLimit;
+        return upperLimit - (lowerLimit - 1);
     }
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {

@@ -11,11 +11,6 @@ import UIKit
 class ResultTableViewCell: UITableViewCell {
     @IBOutlet var resultValue: UILabel!
     @IBOutlet var displayTitleLabel: UILabel!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

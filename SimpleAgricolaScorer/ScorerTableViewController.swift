@@ -31,7 +31,6 @@ class ScorerTableViewController: UITableViewController{
     var newRow: Int
     var rows: [ASRow] = [ASRow]()
     var toggle: Bool
-    let finalScoreRow = ASFinalScoreRow()
     
     required init(coder aDecoder: NSCoder) {
         oldRow = -1
@@ -89,8 +88,14 @@ class ScorerTableViewController: UITableViewController{
         
         let membersRow = ASLimitResultRow(title: "Number of Family Members",
                                           withUpperLimit: 5,
+                                          lowerLimit: 2,
                                           pointsRule: player!.membersRule,
-                                          row: ASLimitRow(limit: 8))
+                                          row: ASLimitRow(limit: 5, lowerLimit: 2))
+        
+//        let membersRow = ASLimitResultRow(title: "Number of Family Members",
+//                                          withUpperLimit: 5,
+//                                          pointsRule: player!.membersRule,
+//                                          row: ASLimitRow(limit: 8))
         
         let plowedFieldsRow = ASLimitResultRow(title: "Plowed Fields",
                                                withUpperLimit: 13,
@@ -302,6 +307,7 @@ class ScorerTableViewController: UITableViewController{
             
             cell.selectionStyle = UITableViewCellSelectionStyle.None
             cell.upperLimit = (row as! ASLimitRow).upperLimit
+            cell.lowerLimit = (row as! ASLimitRow).lowerLimit
             cell.LimitPicker.reloadAllComponents()
 
             return cell
